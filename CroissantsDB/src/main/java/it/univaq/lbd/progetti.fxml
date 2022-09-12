@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="it.univaq.lbd.controllers.ProgettiController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="cercaProgettiTextField" alignment="CENTER" prefHeight="25.0" prefWidth="351.0" />
+            <Button fx:id="cercaProgettiButton" mnemonicParsing="false" onAction="#cercaProgetti" prefHeight="25.0" prefWidth="105.0" text="Cerca" />
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="340.0" prefWidth="112.0" spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="piuAttiviButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Più Attivi" />
+            <Button fx:id="stagnantiButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#progettiStagnanti" prefHeight="25.0" prefWidth="74.0" text="Stagnanti" />
+            <Button fx:id="tuttiButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tuttiIProgetti" prefHeight="25.0" prefWidth="74.0" text="Tutti" />
+            <Button fx:id="indietroButton" alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#vaiIndietro" text="Indietro">
+               <VBox.margin>
+                  <Insets top="70.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </VBox>
+   </right>
+   <left>
+      <TableView fx:id="progettiTableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="302.0" prefWidth="488.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="nomeProgettoTableColumn" prefWidth="106.39993131160736" text="Nome Progetto" />
+            <TableColumn fx:id="argomentoTableColumn" prefWidth="96.79998779296875" text="Argomento" />
+            <TableColumn fx:id="descrizioneTableColumn" prefWidth="75.0" text="Descrizione" />
+            <TableColumn fx:id="azioniTableColumn" prefWidth="208.39999389648438" text="Azioni" />
+        </columns>
+      </TableView>
+   </left>
+</BorderPane>
